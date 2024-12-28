@@ -1,0 +1,32 @@
+###
+GET http://localhost:3000/user-api/users
+
+### singleuser by _id
+GET http://localhost:3000/user-api/users/676f964fdaec5b58b481e6a6
+
+### single user by non_id
+GET http://localhost:3000/user-api/user/Bob
+
+### create
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "id":"3",
+    "name":"Bob",
+    "age":"20"
+}
+
+### update the user
+PUT http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "_id": "676f964fdaec5b58b481e6a6",
+    "id":2,
+    "name":"ram",
+    "age":"20"
+}
+
+###
+DELETE http://localhost:3000/user-api/users/3
